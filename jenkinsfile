@@ -10,12 +10,8 @@ pipeline {
 
         stage('Run Python Script') {
             steps {
-                python {
-                    command """
-                        python --version
-                        python script.py
-                    """
-                }
+                bat 'python --version'
+                bat 'python script.py'   // change script.py to your filename
             }
         }
     }
