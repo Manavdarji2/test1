@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        PY_HOME = tool 'Default'
-        PATH = "${PY_HOME}\\;${PY_HOME}\\Scripts\\;${PATH}"
+        PY_HOME = tool name: 'Default', type: 'jenkins.plugins.shiningpanda.tools.PythonInstallation'
+        PATH = "${PY_HOME}\\;${PY_HOME}\\Scripts\\;${env.PATH}"
     }
     stages {
         stage('Checkout') {
