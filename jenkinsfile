@@ -10,8 +10,11 @@ pipeline {
 
         stage('Run Python Script') {
             steps {
-                bat 'python --version'
-                bat 'python script.py'   // change script.py to your filename
+                // Check Python version
+                bat '"C:\\Users\\Manav\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" --version'
+
+                // Run your script
+                bat '"C:\\Users\\Manav\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" script.py'
             }
         }
     }
