@@ -13,10 +13,8 @@ pipeline {
         stage('Run Python Script') {
             steps {
                 // Check Python version
-                bat '"C:\\Users\\Manav Darji\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" --version'
+                bat 'Python --version'
 
-                // Run your script
-                bat '"C:\\Users\\Manav Darji\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" script.py'
             }
         }
     }
