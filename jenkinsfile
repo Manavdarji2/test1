@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-      python "Default"
+        jenkins.plugins.shiningpanda.tools.PythonInstallation "Default"
     }
     stages {
         stage('Checkout') {
